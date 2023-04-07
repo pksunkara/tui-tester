@@ -1,0 +1,34 @@
+[workspace]
+resolver = "2"
+
+members = [".", "example"]
+
+[workspace.package]
+version = "0.1.0"
+
+edition      = "2024"
+license      = "MIT OR Apache-2.0"
+repository   = "https://github.com/rust-cli/tui-tester"
+rust-version = "1.88.0"
+
+[package]
+name    = "tui-tester"
+version = { workspace = true }
+
+categories  = ["command-line-interface"]
+description = "A library for testing terminal user interfaces"
+keywords    = ["cli", "testing", "tui"]
+
+edition      = { workspace = true }
+license      = { workspace = true }
+repository   = { workspace = true }
+rust-version = { workspace = true }
+
+[workspace.dependencies]
+crossterm = "0.29.0"
+
+[dependencies]
+vt100 = "0.16.2"
+
+[dev-dependencies]
+crossterm = { workspace = true }
