@@ -1,0 +1,10 @@
+[package]
+name = "example"
+
+edition      = { workspace = true }
+rust-version = { workspace = true }
+
+[dependencies]
+anyhow     = "1.0.83"
+crossterm  = { workspace = true }
+tui-tester = { path = ".." }
